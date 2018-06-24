@@ -9,29 +9,17 @@
 <br><br>
 Please make sure you answer the questions immediately at the end of the session so that we can get your best perspective about the session. Thank you for your help!
 </p>
-        <p>This meditation session will be 5:31 minutes.</p>
-        <audio id= "audio">
+
+        <audio id= "audio" controls>
           <source src="no-sound.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>
-        <br>
-        <button onclick="playAudio()">Play Meditation</button></a>
-        <br>
-        <button onclick="pauseAudio()">Pause Meditation</button></a>
-        <br><br>Once the meditation has completed, please continue to review your experience. <br><br>
+        <br><br>
         <a href="https://goo.gl/forms/foVfipczlpLrgRp32" onclick="javascript:return checkAudio()"><button>Review Experience</button></a>
     </div>
 
     <script>
         var audio = document.getElementById("audio");
-
-        function playAudio() {
-            audio.play();
-        }
-
-        function pauseAudio() {
-            audio.pause();
-        }
 
         function checkAudio() {
             if(audio.ended === false){
