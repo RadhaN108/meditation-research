@@ -1,10 +1,10 @@
+body {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.button {
-    color: blue;
-    border-color: blue;
 }
