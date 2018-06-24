@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Meditation Demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class = "container">
+        <p>Welcome to our test</p>
+
+        Code: <input id="password" type="text"/>
+        <button><a href="test.html" onclick="javascript:return validatePass()">Submit</a></button>
+
+        <script>
+        function validatePass(){
+            if(document.getElementById("password").value == 'Tester1'){
+                return true;
+            } else{
+                alert('Incorrect Code');
+                return false;
+            }
+        }
+        </script>
+    </div>
+</body>
+</html>
