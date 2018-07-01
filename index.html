@@ -1,21 +1,34 @@
 <html>
 <head>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
     <title>Meditation Demo</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div class = "container">
-        <p>Hello! Thank you for being a part of our ongoing study with Headspace.We are a group of CMU students from the School of Computer Science  working on a study to try to understand what effects sound has during meditation. Please enter the code you were provided via email to begin.</p>
+        <h1>Carnegie Mellon<br/>Meditation Study</h1>
 
-        Code: <input id="password" type="text"/>
-        <a href="test.html" onclick="javascript:return validatePass()"><button>Submit</button></a>
-
+        <p class="line-space"><b>Thank you for agreeing to participate in our study! We are a group of CMU students from the School of Computer Science working on a study to try to understand what effects sound has during meditation.</b></p>
+        <div class = "white-bg">
+            <p>Please enter the code you were provided via email to begin.</p><input id="password" type="text"/>
+            <!-- TO DO: change link depending on code entered -->
+            <a onclick="javascript:return validatePass()"><button>START STUDY</button></a>
+        </div>
         <script>
         function validatePass(){
-            if(document.getElementById("password").value == 'Test'){
+            if(document.getElementById("password").value == 'Session1'){
+                window.location.href = "session1instructions.html";
                 return true;
-            } else{
-                alert('Incorrect Code');
+            } else if(document.getElementById("password").value == 'Session2'){
+                window.location.href = "session2instructions.html";
+                return true;
+            } else if(document.getElementById("password").value == 'Session3'){
+                window.location.href = "session3instructions.html";
+                return true;
+            } else {
+                alert('Incorrect Code. Please try again.');
                 return false;
             }
         }

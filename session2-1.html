@@ -1,0 +1,75 @@
+<html>
+<head>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <title>Meditation Demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class = "container white-bg">
+        <h1>Session 2</h1>
+        <p>
+        <b>Do not reload</b> this page during the audio session or else your progress will restart from the beginning.</p>
+        <audio id= "audio">
+            <!-- CHANGE HERE FOR SESSIONS -->
+          <source src="no-sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+        <!-- <p id="timeElapsed"></p> -->
+        <br>
+            <img onclick="toggleAudio()" id="control" src="play.svg">
+        <!-- <br> -->
+        <!-- <button onclick="checkTime()">Check Time Elapsed</button> -->
+        <br><br>Once the meditation has completed, please continue to review your experience. <br><br>
+        <a href="https://goo.gl/forms/foVfipczlpLrgRp32" onclick="javascript:return checkAudio()"><button>Review Experience</button></a>
+    </div>
+
+    <script>
+        var audio = document.getElementById("audio");
+        var control = document.getElementById("control");
+
+        var isPlaying = false;
+
+        function checkAudio() {
+            if(audio.ended === false){
+                alert("Audio not finished playing.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function checkTime() {
+            var time = audio.played.end(0);
+
+            if (!time) {
+                alert("Time Elapsed: 0");
+            } else {
+                alert("Time Elapsed: " + time + " seconds");
+            }
+        }
+
+        function toggleAudio() {
+            if (isPlaying == false) {
+                isPlaying = true;
+                control.src = "pause.svg";
+                audio.play();
+            } else {
+                isPlaying = false;
+                control.src = "play.svg";
+                audio.pause();
+            }
+        }
+
+        // var timeElapsed = document.getElementById("timeElapsed");
+
+        // var time = audio.played.end(0);
+
+        // var label = document.createTextNode("Time Elapsed: " + time);
+
+        // timeElapsed.appendChild(label);
+        // timeElapsed.appendChild(time);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <title>Meditation Demo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class = "container white-bg">
+        <h1>Session 2</h1>
+        <!-- <h2>Instructions</h2> -->
+
+        <p><b>Instructions</b>
+            <br><br>
+        Please choose the sound experience you would prefer. This will be your chosen sound preference for the the next two sessions.
+        <br><br>
+        <form>
+            <input type="radio" id="option1"> Option 1<br>
+            <input type="radio" id="option2"> Option 2<br>
+            <input type="radio" id="option3"> Option 3<br>
+            <!-- <input type="submit" value="Submit"> -->
+        </form>
+        </p>
+        <br>
+        <a onclick="javascript:return goToSelection()"><button>PROCEED TO STUDY</button></a>
+    </div>
+
+    <script>
+        function goToSelection () {
+            if(document.getElementById('option1').checked) {
+              window.location.href = "session2-1.html";
+              return true;
+            } else if (document.getElementById('option2').checked) {
+              window.location.href = "session2-2.html";
+              return true;
+            } else if (document.getElementById('option3').checked) {
+              window.location.href = "session2-3.html";
+              return true;
+            } else {
+                alert("No option selected. Please select one and try again.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
