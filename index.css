@@ -83,7 +83,7 @@ button {
 /*// Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) { 
 
-  html {
+/*  html {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   color: #5a6175;
@@ -97,7 +97,7 @@ button {
   h1 {
     font-size: 3em;
     /*margin-bottom: 0;*/
-  }
+  }*/
 
 }
 
