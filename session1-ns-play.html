@@ -9,19 +9,15 @@
 <body>
     <div class = "container white-bg">
         <h1>Session 1</h1>
-        <p>
-         <b>Do not reload</b> this page during the audio session or else your progress will restart from the beginning.</p>
+
         <audio id= "audio">
             <!-- CHANGE HERE FOR SESSIONS -->
           <source src="no-sound.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>
-        <!-- <p id="timeElapsed"></p> -->
         <br>
             <img onclick="toggleAudio()" id="control" src="play.svg">
-        <!-- <br> -->
-        <!-- <button onclick="checkTime()">Check Time Elapsed</button> -->
-        <br><br>Once the meditation has completed, please continue to review your experience. <br><br>
+        <br><br>
         <a href="https://goo.gl/forms/foVfipczlpLrgRp32" onclick="javascript:return checkAudio()"><button>Review Experience</button></a>
     </div>
 
@@ -61,15 +57,6 @@
                 audio.pause();
             }
         }
-
-        // var timeElapsed = document.getElementById("timeElapsed");
-
-        // var time = audio.played.end(0);
-
-        // var label = document.createTextNode("Time Elapsed: " + time);
-
-        // timeElapsed.appendChild(label);
-        // timeElapsed.appendChild(time);
     </script>
 </body>
 </html>

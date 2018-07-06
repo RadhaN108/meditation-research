@@ -18,14 +18,17 @@
         </div>
         <script>
         function validatePass(){
-            if(document.getElementById("password").value == 'Session1'){
-                window.location.href = "session1instructions.html";
+            if(document.getElementById("password").value == 'SoundFirst'){
+                window.location.href = "session1-s.html";
                 return true;
-            } else if(document.getElementById("password").value == 'Session2'){
-                window.location.href = "session2instructions.html";
+            } else if(document.getElementById("password").value == 'NoSoundFirst'){
+                window.location.href = "session1-ns.html";
                 return true;
-            } else if(document.getElementById("password").value == 'Session3'){
-                window.location.href = "session3instructions.html";
+            } else if(document.getElementById("password").value == 'SoundSecond'){
+                window.location.href = "session2-s.html";
+                return true;
+            } else if(document.getElementById("password").value == 'NoSoundSecond'){
+                window.location.href = "session2-ns.html";
                 return true;
             } else {
                 alert('Incorrect Code. Please try again.');
